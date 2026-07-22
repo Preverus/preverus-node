@@ -2,6 +2,9 @@
 
 Node.js backend client for Preverus fraud decisions, events, lookups, and webhooks.
 
+Website: https://preverus.com  
+Documentation: https://preverus.com/docs
+
 This package is for server-side code only. It uses your private server key and must never be imported into browser bundles.
 
 ## Install
@@ -18,7 +21,7 @@ Load the hosted browser script on server-rendered or frontend pages:
 
 ```html
 <script
-  src="https://cdn.preverus.com/v1/preverus.js"
+  src="https://api.preverus.com/v1/preverus.js"
   data-preverus-key="pk_live_xxx"
   data-preverus-auto="true"
   data-preverus-track-forms="true"
