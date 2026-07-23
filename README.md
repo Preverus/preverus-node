@@ -204,6 +204,8 @@ const visitorByFingerprint = await preverus.lookupVisitor({ fingerprint: "fp_has
 
 const metadata = await preverus.lookupMetadata({ key: "email", value: "person@example.com" });
 const graph = await preverus.metadataGraph({ visitorId: "v_abc123" });
+
+const userRiskProfile = await preverus.lookupUserRiskProfile({ externalUserId: "acct_42" });
 ```
 
 Use lookups for investigation and context. Use `evaluate()` for final enforcement.

@@ -45,6 +45,10 @@ export class PreverusNodeClient {
     });
   }
 
+  async lookupUserRiskProfile(input: { externalUserId: string }): Promise<ApiResult> {
+    return this.http.get(`/v1/users/${encodeURIComponent(input.externalUserId)}/risk-profile`);
+  }
+
   verifyWebhook(input: { rawBody: string | Buffer; timestamp: string; signatureHeader: string; secret: string; toleranceSeconds?: number }): boolean {
     const toleranceSeconds = input.toleranceSeconds ?? 300;
     if (!/^\d+$/.test(input.timestamp) || !input.signatureHeader || !input.secret) return false;
